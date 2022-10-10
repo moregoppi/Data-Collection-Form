@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import "./App.css";
 
 const MultipleInputs = () => {
 
@@ -6,7 +7,7 @@ const MultipleInputs = () => {
         username: "",
         email: "",
         phone: "",
-        preference:""
+        age:""
     });
 
     const [records, setRecords] = useState([]);
@@ -28,63 +29,64 @@ const MultipleInputs = () => {
         setRecords([...records, newRecord])
         console.log(records)
 
-        setUserRegistration({username:"", email:"", phone:"", preference:""});
+        setUserRegistration({username:"", email:"", phone:"", age:""});
     }
 
     return (
-        <>
+        <section class="inputt" id="inputt"> 
             <form action="" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Fullname</label>
-                    <input type="text" autoComplete="off"
+                <h1>Your details</h1>
+                <div class="inputbox" id="inputbox">
+                    <label htmlFor="username">Full Name</label>
+                    <input type="text" placeholder='Your name' autoComplete="off"
                     value={userRegistration.username}
                     onChange={handleInput}
                     name="username" id="username" />
                 </div>
 
-                <div>
-                    <label htmlFor="email">email</label>
-                    <input type="text" autoComplete="off"
+                <div class="inputbox" id="inputbox">
+                    <label htmlFor="email">Email</label>
+                    <input type="text" placeholder='eg:-xyz@gmail.com' autoComplete="off"
                     value={userRegistration.email}
                     onChange={handleInput}
                     name="email" id="email" />
                 </div>
 
-                <div>
-                    <label htmlFor="phone">phone</label>
-                    <input type="text" autoComplete="off"
+                <div class="inputbox" id="inputbox">
+                    <label htmlFor="phone">Phone</label>
+                    <input type="text" placeholder='eg:-9361912012' autoComplete="off"
                     value={userRegistration.phone}
                     onChange={handleInput}
                     name="phone" id="phone" />
                 </div>
 
-                <div>
-                    <label htmlFor="preference">preference</label>
-                    <input type="text" autoComplete="off"
-                    value={userRegistration.preference}
+                <div class="inputbox" id="inputbox">
+                    <label htmlFor="age">Age</label>
+                    <input type="text" placeholder='age' autoComplete="off"
+                    value={userRegistration.age}
                     onChange={handleInput}
-                    name="preference" id="preference" />
+                    name="age" id="age" />
                 </div>
 
-                <button type="submit">Registration  </button>
+                <button type="submit" class="submit-btn">Register</button>
             </form>
 
-            <div>
+            <div class="data" id="data">
                 {
                     records.map((curElem) => {
-                        const{id, username, email, phone,preference} = curElem;
+                        const{id, username, email, phone,age} = curElem;
                         return(
-                            <div className="showDataStyle" key={curElem.id}>
-                                <p>{username}</p>
-                                <p>{email}</p>
-                                <p>{phone}</p>
-                                <p>{preference}</p>
+                            <div className="showDataStyle" key={curElem.id} class="showdata">
+                                <p class="usernamefetched">{username}</p>
+                                <p class="emailfetched">{email}</p>
+                                <p class="phonefetched">{phone}</p>
+                                <p class="prefernce">{age}</p>
                             </div>
                         )
                     })
                 }
             </div>
-        </>
+        </section>
     )
 }
 
