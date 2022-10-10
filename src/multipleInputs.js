@@ -70,7 +70,7 @@ const MultipleInputs = () => {
 
                 <button type="submit" class="submit-btn">Register</button>
             </form>
-
+        
             <div class="data" id="data">
                 {
                     records.map((curElem) => {
@@ -86,6 +86,7 @@ const MultipleInputs = () => {
                     })
                 }
             </div>
+        
         </section>
     )
 }
