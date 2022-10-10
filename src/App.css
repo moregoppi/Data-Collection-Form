@@ -1,6 +1,6 @@
 body{
   background-color: rgb(193, 139, 193);
-  background-image: url("C:\Users\hp\OneDrive\Desktop\html css\st4\my-app\download.jpg");
+  background-image: url("C:\Users\hp\OneDrive\Desktop\html css\st4\my-app\new.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -27,7 +27,7 @@ body{
   height: 30px;
   padding: 10px;
   border: none;
-  background-color: rebeccapurple;
+  background-color: rgb(75, 37, 113);
   color: white;
   border-radius:  5px;
   font-weight: bold;
@@ -68,6 +68,7 @@ h1{
   display: grid;
   row-gap: 1rem;
 }
+
 .inputt .data .showdata .usernamefetched{
   -ms-flex-item-align: left;
 }
